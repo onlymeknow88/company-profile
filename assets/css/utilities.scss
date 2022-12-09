@@ -1,0 +1,178 @@
+//primary
+$lust_50: #E62129;
+
+
+//secondary
+$torza_50: #1919A1;
+
+$green_50: #00A650;
+
+$gold_50: #FFD600;
+
+//neutral
+$nero_black_50: #292929;
+$nero_black_30: #808080;
+$nero_black_10: #CCCCCC;
+$nero_black_5: #F2F2F2;
+$nero_black_2: #FAFAFA;
+$nero_white: #FFFFFF;
+
+//system state color
+$green_positif: #99FFCA;
+$red_negatif: #FFCCDF;
+$gray_neutral: #D3D3F8;
+$gold_warning: #FFEF99;
+
+$font-weights: (
+    light: 300,
+    regular: 400,
+    medium: 500,
+    semibold: 600,
+    bold: 700,
+);
+
+//margin
+.mt-30 {
+    margin-top: 30px;
+}
+
+.ml-m-32 {
+    margin-left: -32px;
+}
+
+.mt-25 {
+    margin-top: 25px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+.mb-60 {
+    margin-bottom: 60px;
+}
+.mb-20 {
+    margin-bottom: 20px;
+}
+.mb-10 {
+    margin-bottom: 10px;
+}
+.mb-12 {
+    margin-bottom: 12;
+}
+
+.mb-6 {
+    margin-bottom: 6px;
+}
+
+.mt-8 {
+    margin-top: 8px;
+}
+
+//padding
+.pt-50 {
+    padding-top: 50px;
+}
+
+.pb-50 {
+    padding-bottom: 50px;
+}
+
+.pt-60 {
+    padding-top: 60px;
+}
+
+.pb-60 {
+    padding-bottom: 60px;
+}
+
+.pt-80 {
+    padding-top: 80px;
+}
+
+.pb-80 {
+    padding-bottom: 80px;
+}
+
+.pl-20 {
+    padding-left: 20px;
+}
+.pb-20 {
+    padding-bottom: 20px;
+}
+.pr-20 {
+    padding-right: 20px;
+}
+.pt-20 {
+    padding-top: 20px;
+}
+
+
+
+//font color
+.text-red {
+    color:  $lust_50;
+}
+
+.text-white {
+    color:  $nero_white;
+}
+
+//font-weight
+.fw-bold {
+    font-weight: map-get($font-weights , bold);
+}
+
+.fw-semibold {
+    font-weight: map-get($font-weights , semibold);
+}
+
+//fontsize 
+.text-md-1 {
+    font-size: 16px;
+}
+
+.text-md {
+    font-size: 14px;
+}
+.text-lg {
+    font-size: 18px;
+}
+
+.text-lg-1 {
+    font-size: 20px;
+}
+.text-lg-2 {
+    font-size: 22px;
+}
+
+@media screen and (min-width: 60em) and (max-width: 80em) {
+.pbm-2 {
+    padding-bottom: 2px;
+}
+
+.pbm-20 {
+    padding-bottom: 20px;
+}
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .pbm-2 {
+        padding-bottom: 2px;
+    }
+    .pbm-20 {
+        padding-bottom: 20px;
+    }
+
+    .mbm-20 {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3.5) {
+    .pbm-2 {
+        padding-bottom: 2px;
+    }
+    .pbm-20 {
+        padding-bottom: 20px;
+    }
+}
