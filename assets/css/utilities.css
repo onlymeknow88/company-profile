@@ -10,6 +10,10 @@
   margin-top: 25px;
 }
 
+.mt-100 {
+  margin-top: 100px;
+}
+
 .mb-30 {
   margin-bottom: 30px;
 }
@@ -131,6 +135,9 @@
   }
   .mbm-20 {
     margin-bottom: 20px;
+  }
+  .mbm-0 {
+    margin-bottom: 0px;
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 3.5) {

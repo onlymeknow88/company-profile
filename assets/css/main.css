@@ -32,6 +32,8 @@ body {
 
 .navbar {
   background-color: #FFFFFF;
+  z-index: 100;
+  box-shadow: 0px 4px 25px rgba(41, 41, 41, 0.08);
 }
 .navbar .navbar-nav .nav-link {
   margin-left: 30px;
@@ -107,6 +109,12 @@ body {
 .services .supplier-service ul.items li.item {
   list-style: none;
   margin-bottom: 6px;
+}
+.services .supplier-service ul.items li.item:hover {
+  color: #1919A1;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #1919A1;
+          text-decoration-color: #1919A1;
 }
 
 .client .img-clients {
@@ -250,9 +258,6 @@ body {
   }
   .services img {
     display: none;
-  }
-  .services .supplier-service {
-    text-align: center;
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 3.5) {

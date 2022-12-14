@@ -72,6 +72,8 @@ body {
 
 .navbar {
     background-color: $nero_white;
+    z-index: 100;
+    box-shadow: 0px 4px 25px rgba(41, 41, 41, 0.08);
     .navbar-nav {
         .nav-link {
             margin-left: 30px;
@@ -163,6 +165,12 @@ body {
             li.item {
                 list-style: none;
                 margin-bottom: 6px;
+
+                &:hover {
+                    color: $torza_50;
+                    text-decoration: underline;
+                    text-decoration-color: $torza_50;
+                }
             }
         }
     }
@@ -378,9 +386,15 @@ body {
         img {
             display: none;
         }
-        .supplier-service {
-           text-align: center;
-        }
+
+        // .supplier-service {
+        //     ul.items {
+        //         li.item {
+        //             // margin-bottom: 5px;
+        //         }
+        //     }
+        // } 
+
      }
 
     
