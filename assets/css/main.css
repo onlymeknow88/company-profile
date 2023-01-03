@@ -31,13 +31,20 @@ body {
 }
 
 .navbar {
-  background-color: #FFFFFF;
-  z-index: 100;
+  z-index: 99;
+}
+.navbar.navbar-scroll {
+  background-color: #ffffff;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  z-index: 99;
   box-shadow: 0px 4px 25px rgba(41, 41, 41, 0.08);
+  transition: background-color 0.3s linear;
 }
 .navbar .navbar-nav .nav-link {
   margin-left: 30px;
-  font-size: 14px;
+  font-size: 13px;
   color: #292929;
   font-weight: 400;
 }
@@ -46,15 +53,18 @@ body {
 }
 .navbar .navbar-nav .nav-link.active {
   color: #292929;
+  -webkit-text-decoration: underline solid #292929 1px;
+          text-decoration: underline solid #292929 1px;
   font-weight: 700;
 }
 
 .banner {
-  padding: 64px 0 64px 0;
+  padding: 120px 0 64px 0;
   background-color: #FAFAFA;
+  position: relative;
 }
 .banner .copywriting {
-  padding-top: 124px;
+  padding-top: 80px;
 }
 .banner .header {
   color: #292929;
@@ -102,19 +112,20 @@ body {
   height: 283px !important;
 }
 .services .supplier-service {
-  background-color: #FAFAFA;
+  background-color: #FAD3D4;
   border-radius: 20px;
   padding: 30px 40px;
+}
+.services .supplier-service h2 a {
+  text-decoration: none;
+  color: #292929;
+}
+.services .supplier-service h2 a:hover {
+  color: #1919A1;
 }
 .services .supplier-service ul.items li.item {
   list-style: none;
   margin-bottom: 6px;
-}
-.services .supplier-service ul.items li.item:hover {
-  color: #1919A1;
-  text-decoration: underline;
-  -webkit-text-decoration-color: #1919A1;
-          text-decoration-color: #1919A1;
 }
 
 .client .img-clients {
@@ -126,6 +137,9 @@ body {
   width: 180px !important;
 }
 
+.supplier {
+  padding-top: 80px;
+}
 .supplier .item-supplier {
   display: flex;
   flex-direction: column;
@@ -145,6 +159,9 @@ body {
   height: 100%;
 }
 
+.service {
+  padding-top: 80px;
+}
 .service .item-service {
   display: flex;
   flex-direction: column;
@@ -164,6 +181,9 @@ body {
   height: 100%;
 }
 
+.rental {
+  padding-top: 80px;
+}
 .rental .img-group {
   display: flex;
   align-items: flex-start;
@@ -178,6 +198,10 @@ body {
   border: none;
   border-radius: 18px;
   box-shadow: 0px 4px 10px rgba(85, 85, 85, 0.15);
+}
+
+.about_us {
+  padding-top: 80px;
 }
 
 .icon_wa {
@@ -206,7 +230,14 @@ body {
   }
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .navbar-brand img {
+  .navbar {
+    background-color: #FFFFFF !important;
+  }
+  .navbar.navbar-scroll {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+  .navbar .navbar-brand img {
     width: 250px;
   }
   .banner .copywriting {
@@ -239,6 +270,9 @@ body {
     width: 100%;
     height: 100%;
   }
+  .service {
+    padding-top: 80px;
+  }
   .service .item-service {
     display: flex;
     flex-direction: column;
@@ -255,6 +289,12 @@ body {
   .service .item-service .img-group .item img {
     width: 100%;
     height: 100%;
+  }
+  .about_us span.colon {
+    display: none;
+  }
+  .about_us span.spasi {
+    display: none;
   }
   .services img {
     display: none;

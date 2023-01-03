@@ -70,36 +70,70 @@ body {
     }
 }
 
-.navbar {
-    background-color: $nero_white;
-    z-index: 100;
-    box-shadow: 0px 4px 25px rgba(41, 41, 41, 0.08);
-    .navbar-nav {
-        .nav-link {
-            margin-left: 30px;
-            font-size: 14px;
-            color: $nero_black_50;
-            font-weight: map-get($font-weights , regular);
+// .header-inner {
+
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width:100%;
+//     z-index: 99;
+//     background-color: transparent;
+
+    
+
+    .navbar {
+        &.navbar-scroll {
+            background-color: #ffffff;
+            padding: 0;
+            position: fixed;
+            top:0;
+            z-index: 99;
+            box-shadow: 0px 4px 25px rgba(41, 41, 41, 0.08);
+            transition: background-color .3s linear;
+    
+            // .nav-item {
+            //     .nav-link {
+            //         color: $black;
+            //     }
+            // }
             
-            &:hover {
+        }
+        // background-color: transparent;
+        z-index: 99;
+        // box-shadow: 0px 4px 25px rgba(41, 41, 41, 0.08);
+        .navbar-nav {
+            .nav-link {
+                margin-left: 30px;
+                font-size: 13px;
                 color: $nero_black_50;
-            }
-            
-            &.active {
-                color: $nero_black_50;
-                font-weight: map-get($font-weights , bold);
+                font-weight: map-get($font-weights , regular);
+                
+                &:hover {
+                    color: $nero_black_50;
+                }
+                
+                &.active {
+                    color: $nero_black_50;
+                    text-decoration: underline solid $nero_black_50 1px;
+                    font-weight: map-get($font-weights , bold);
+
+                    
+                }
             }
         }
     }
-}
+// }
+
 
 
 .banner {
-    padding: 64px 0 64px 0;
+    padding: 120px 0 64px 0;
     background-color: $nero_black_2;
+    // margin-top: 80px;
+    position: relative;
 
     .copywriting {
-        padding-top: 124px;
+        padding-top: 80px;
     }
 
     .header {
@@ -155,10 +189,22 @@ body {
     }
     
     .supplier-service {
-        background-color: $nero_black_2;
+        background-color: $lust_10;
         border-radius: 20px;
         padding: 30px 40px;
         // width: 100%;
+        
+        h2 {
+            a {
+                text-decoration: none;
+                color: $nero_black_50;
+
+                &:hover {
+                    color: $torza_50;
+                }
+            }
+        }
+
         
         ul.items {
             // width: 55%;
@@ -166,11 +212,6 @@ body {
                 list-style: none;
                 margin-bottom: 6px;
 
-                &:hover {
-                    color: $torza_50;
-                    text-decoration: underline;
-                    text-decoration-color: $torza_50;
-                }
             }
         }
     }
@@ -189,6 +230,7 @@ body {
 }
 
 .supplier {
+    padding-top: 80px;
     .item-supplier {
         display: flex;
         flex-direction: column;
@@ -214,6 +256,7 @@ body {
 }
 
 .service {
+    padding-top: 80px;
     .item-service {
         display: flex;
         flex-direction: column;
@@ -239,6 +282,7 @@ body {
  }
 
 .rental {
+    padding-top: 80px;
     .img-group {
         display: flex;
         align-items: flex-start;
@@ -256,6 +300,10 @@ body {
             box-shadow: 0px 4px 10px rgba(85, 85, 85, 0.15);
         }
     }
+}
+
+.about_us {
+    padding-top: 80px;
 }
 
 .icon_wa {
@@ -305,9 +353,16 @@ body {
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
-    .navbar-brand {
-        img {
-            width: 250px;
+    .navbar {
+        background-color: $nero_white !important;
+        &.navbar-scroll {
+            padding-top: 0.5rem !important;
+            padding-bottom: 0.5rem !important;
+        }
+        .navbar-brand {
+            img {
+                width: 250px;
+            }
         }
     }
 
@@ -358,6 +413,7 @@ body {
     }
 
     .service {
+        padding-top: 80px;
         .item-service {
             display: flex;
             flex-direction: column;
@@ -377,6 +433,17 @@ body {
                     }
                 }
          
+            }
+        }
+     }
+
+     .about_us {
+        span {
+            &.colon {
+                display: none;
+            }
+            &.spasi {
+                display: none;
             }
         }
      }
